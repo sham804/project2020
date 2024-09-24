@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .module-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .module-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .module-list label {
+            margin-left: 8px;
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .submit-button button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Application Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification" name="qualification" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <input type="text" id="experience" name="experience" required>
+            </div>
+            <div class="form-group">
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place" required>
+            </div>
+            <div class="form-group">
+                <label for="district">District:</label>
+                <input type="text" id="district" name="district" required>
+            </div>
+
+            <h2>Marketing Modules</h2>
+            <ul class="module-list">
+                <li>
+                    <input type="checkbox" id="module1" name="modules" value="Introduction to marketing">
+                    <label for="module1">Introduction to marketing</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module2" name="modules" value="Market research & consumer behaviour">
+                    <label for="module2">Market research & consumer behaviour</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module3" name="modules" value="Basics of branding">
+                    <label for="module3">Basics of branding</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module4" name="modules" value="Developing a brand identity">
+                    <label for="module4">Developing a brand identity</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module5" name="modules" value="Introduction to advertising">
+                    <label for="module5">Introduction to advertising</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module6" name="modules" value="Digital marketing fundamentals">
+                    <label for="module6">Digital marketing fundamentals</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module7" name="modules" value="Understanding generative AI">
+                    <label for="module7">Understanding generative AI</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module8" name="modules" value="Content marketing">
+                    <label for="module8">Content marketing</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module9" name="modules" value="Creative ad design">
+                    <label for="module9">Creative ad design</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module10" name="modules" value="Social media marketing">
+                    <label for="module10">Social media marketing</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module11" name="modules" value="Web design & Wordpress">
+                    <label for="module11">Web design & Wordpress</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module12" name="modules" value="Keyword research">
+                    <label for="module12">Keyword research</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module13" name="modules" value="Introduction to SEO">
+                    <label for="module13">Introduction to SEO</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module14" name="modules" value="Technical SEO for Wordpress">
+                    <label for="module14">Technical SEO for Wordpress</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module15" name="modules" value="On-page SEO">
+                    <label for="module15">On-page SEO</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module16" name="modules" value="Off-page SEO">
+                    <label for="module16">Off-page SEO</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module17" name="modules" value="Google My Business (GMB)">
+                    <label for="module17">Google My Business (GMB)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module18" name="modules" value="Meta Paid Media Marketing">
+                    <label for="module18">Meta Paid Media Marketing</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module19" name="modules" value="Google AdWords SEM Advertising Campaign">
+                    <label for="module19">Google AdWords SEM Advertising Campaign</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module20" name="modules" value="Learn Paid Media Marketing">
+                    <label for="module20">Learn Paid Media Marketing</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module21" name="modules" value="YouTube & Influencer Marketing">
+                    <label for="module21">YouTube & Influencer Marketing</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module22" name="modules" value="Marketing Automation & Agency Orientation">
+                    <label for="module22">Marketing Automation & Agency Orientation</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="module23" name="modules" value="LinkedIn Optimization">
+                    <label for="module23">LinkedIn Optimization</label>
+                </li>
+            </ul>
+
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
